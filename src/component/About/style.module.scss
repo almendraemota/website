@@ -1,0 +1,38 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    max-width: 110rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    color: var(--gray-dark);
+  }
+}
+
+@media (max-width: 575.98px){
+  #about {
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
