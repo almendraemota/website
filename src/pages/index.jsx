@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
 //imports-components-and-styles
-import HomePage from '../component/HomePage'
-import About from '../component/About'
-import Services from '../component/Services'
+import HomePage from '../components/HomePage'
+import About from '../components/About'
+import Services from '../components/Services'
 
 export default function Home() {
   return (
