@@ -10,7 +10,7 @@ export default function Home() {
     <div id="home_section">
     <section className="section" id={styles.home}>
         <div className={cx(styles.container, styles.home)}>
-          <div>
+          <div className={styles.homeTitle}>
             <h1 className="title">SOCIEDADE DE ADVOGADOS</h1>
             <p className="text">
               Com atuação nas áreas comercial, trabalhista, previdenciária e tributária.
