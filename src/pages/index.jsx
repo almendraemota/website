@@ -3,6 +3,7 @@ import Head from 'next/head'
 //imports-components-and-styles
 import HomePage from '../component/HomePage'
 import About from '../component/About'
+import Services from '../component/Services'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <HomePage />
         <About />
+        <Services />
       </main>
     </>
   )

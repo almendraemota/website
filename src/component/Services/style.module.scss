@@ -1,0 +1,83 @@
+.container {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+#services {
+  min-height: auto;
+  
+  background-image: url('../../../public/images/services.svg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--black);
+}
+
+.textContainerServices {
+  display: flex;
+  justify-content: center;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.ico, .ico2 img{
+  margin-bottom: 0.875rem;
+}
+
+.servicesCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  height: 52rem;
+  padding: 5rem 4rem;
+  margin-top: 4.4rem;
+  border-radius: 2px;
+  
+  background-color: var(--blue);
+  transition: ease 0.2s;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    transform: translateY(-12px);
+  }
+}
+
+.servicesText p {
+  max-width: 44rem;
+  margin-top: 2rem;
+  line-height: 2.4rem;
+  font-size: 1.35rem;
+  text-align: justify;
+}
+
+@media (max-width: 1199.98px) {
+  .cardContainer {
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 0;
+  }
+
+  .servicesCard {
+      align-items: center;
+      justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px){
+  .servicesCard {
+      height: auto;
+  }
+
+  .servicesText p {
+      line-height: 2rem;
+  }
+}

@@ -26,7 +26,7 @@ export default function Home() {
               width={497}
               height={246}
               alt="Logo Inicial Almendra e Mota sociedade de advogados" 
-              />
+            />
           </div>
         </div>
     </section>
