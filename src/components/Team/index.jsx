@@ -28,7 +28,7 @@ export default function Team() {
               <h3 className="title-2">Gabriel Almendra</h3>
               <span className="title-2">Sócio</span>
               <p className="subtitle">
-                Graduado em Direito pelo Centro Universitário UniFacid - Faculdade Integral Diferencial, Pós-Graduado em Direito Civil e Processual Civil pela instituição de ensino UNINOVAFAPI, Pós-Graduado em Direito Constitucional pela ESAPI, advogado inscrito na OAB/PI sob nº 18.698.</p>
+              Graduado em Direito pelo Centro Universitário UniFacid - Faculdade Integral Diferencial, Pós-Graduado em Direito Civil e Processual Civil pela instituição de ensino UNINOVAFAPI, Pós-Graduado em Direito Constitucional pela ESAPI, advogado inscrito na OAB/PI sob nº 18.698.</p>
             </div>
 
             <div className={styles.socialTeam}>
@@ -66,7 +66,7 @@ export default function Team() {
               <h3 className="title-2">Heitor Mota</h3>
               <span className="title-2">Sócio</span>
               <p className="subtitle">
-                Graduado em Direito pelo Centro Universitário UniFacid — Faculdade Integral Diferencial, Pós-Graduado em Direito e Panejamento Tributário pela Escola do Legislativo da ALEPI, membro da Comissão de Direito Empresarial da OAB/PI, advogado inscrito na OAB/PI sob nº 18.954.</p>
+              Graduado em Direito pelo Centro Universitário UniFacid — Faculdade Integral Diferencial, Pós-Graduado em Direito e Panejamento Tributário pela Escola do Legislativo da ALEPI, membro da Comissão de Direito Empresarial da OAB/PI, advogado inscrito na OAB/PI sob nº 18.954.</p>
             </div>
 
             <div className={styles.socialTeam}>

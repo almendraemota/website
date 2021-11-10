@@ -1,0 +1,216 @@
+.container {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+#contact {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../public/images/contact.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--black);
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38rem;
+}
+
+.containerForm {
+  width: 100%;
+  height: auto;
+  max-width: 46rem;
+  padding: 3rem;
+  background: var(--blue);
+  border-radius: 6px;
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    font-size:2.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+#contact input[type="text"], 
+#contact input[type="email"], 
+#contact input[type="tel"],
+#contact textarea, 
+#contact button[type="submit"] {
+  text-align: center;
+  font-size: 1.6rem;
+  border: none;
+  color: var(--white);
+
+  &::placeholder { 
+    color: var(--gray-superlight);
+    opacity: 0.8;
+  }
+}
+
+#contact input[type="text"], 
+#contact input[type="email"], 
+#contact input[type="tel"],
+#contact textarea{
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid var(--white);
+  outline: none;
+  resize: none;
+  background: none;
+  transition: ease 0.2s;
+  margin-bottom: 1.4rem;
+
+
+  &:hover {
+    border-bottom: 1px solid var(--white-background);
+  }
+}
+
+#contact button[type="submit"] {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 100%;
+  height: 4.8rem;
+
+  margin-bottom: 1.6rem;
+
+  font-size: 2.2rem;
+  background: var(--white);
+  color: var(--black);
+
+  border-radius: 6px;
+  cursor: pointer;
+  transition: ease 0.2s;
+
+  &:hover {
+    border: 1px solid var(--white);
+    color: var(--white);
+    background: none;
+  }
+}
+
+.socialContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+
+.textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+.contactWhatsapp button {
+  width: 26rem;
+  height: 6rem;
+
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  background: var(--white);
+  color: rgb(12, 173, 12);
+
+  transition: ease 0.2s;
+
+  &:hover {
+    background: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+  }
+}
+
+.contactInstagram button {
+  margin-bottom: 68px;
+  width: 26rem;
+  height: 6rem;
+
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  background: var(--white);
+  color: #DC3768;
+
+  transition: ease 0.2s;
+
+  &:hover {
+    background: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+  }
+}
+
+/*-----RESPONSIVE---*/
+@media (max-width: 1199.98px) {
+  .contactContainer {
+      flex-direction: column;
+      gap: 6rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .containerForm {
+      width: 100%;
+      height: auto;
+      max-width: 36rem;
+      padding: 3rem;
+
+      h3 {
+        font-size: 1.8rem;
+      }
+  }
+
+  #contact button[type="submit"] {
+      font-size: 1.8rem;
+  }
+
+  #contact input[type="text"], 
+  #contact input[type="email"], 
+  #contact input[type="tel"], 
+  #contact textarea {
+      font-size: 1.4rem;
+  }
+
+  .contactContainer {
+      flex-direction: column;
+      gap: 6rem;
+  }
+
+  .socialContact h2{
+      font-size: 1.8rem;
+  }
+
+  .contactWhatsapp button,
+  .contactInstagram button {
+      width: 20rem;
+      height: 6rem;
+      font-size: 1.6rem;
+      margin-bottom:0; 
+  }
+}
+
+@media (max-width: 575.98px) {
+  .containerForm h3 {
+      font-size: 1.7rem;
+  }
+}

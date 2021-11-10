@@ -15,12 +15,6 @@
     --gray-light: #b9b9b9;
     --gray-superlight: #d1d1d1;
     --gradient-blue: linear-gradient(to right,#1F2839, #2A4D8E);
-
-  /* fonts-size */
-  --title-font-size: 3.25rem;
-  --title2-font-size: 2rem;
-  --text-font-size: 1.6rem;
-  --button-font-size: 1.8rem;
 }
 
 * {
@@ -51,7 +45,7 @@ q:before, q:after {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--white);
 }
 
@@ -82,19 +76,20 @@ img {
 }
 
 .title {
-  font-size: var(--title-font-size);
-  font-weight: 600;
+  font-size: 3.25rem;
+  font-weight: 700;
   color: var(--white);
 }
 
 .title-2 {
-  font: 600 var(--title2-font-size) var(--title-font);
+  font-size: 2rem;
+  font-weight: 600;
   color: var(--white);
 }
 
 .text {
-  font-size: var(--text-font-size);
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 300;
   color: var(--gray-light);
 }
 
@@ -105,7 +100,8 @@ img {
   
   border-radius: 0.313rem;
 
-  font: 400 var(--button-font-size) var(--title-font);
+  font-size: 1.8rem;
+  font-weight: 400;
   color: var(--white);
   background-color: var(--blue);
   margin-top: 1.5rem;
