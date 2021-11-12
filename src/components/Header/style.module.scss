@@ -3,15 +3,6 @@
   margin-right: 2.4rem;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px;
-  z-index: 100;
-  background: var(--gradient-blue);
-}
-
 #nav {
   position: fixed;
   width: 100%;
@@ -23,6 +14,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  h1 {
+    font-size: 2rem;
+    color: var(--white);
+  }
 
   .ulContainer {
     display: flex;

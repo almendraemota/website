@@ -16,7 +16,7 @@ export default function Home() {
               Com atuação nas áreas comercial, trabalhista, previdenciária e tributária.
             </p>
             <a href="#about_section">
-              <button className="button">Saiba mais</button>
+              <button className="button-white">Saiba mais</button>
             </a>
           </div>
           <div className={styles.homeLogo}>
