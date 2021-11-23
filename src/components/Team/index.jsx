@@ -11,7 +11,7 @@ export default function Team() {
         <div className={cx(styles.teamContainer, styles.container)}>
           <div className={styles.textContainer}>
             <h2 className="title">NOSSA EQUIPE</h2>
-            <a href="#contact"><button className="button">Contato</button></a>
+            <a href="#contact_section"><button className="button">Contato</button></a>
           </div>
 
           <div className={styles.teamCard}>

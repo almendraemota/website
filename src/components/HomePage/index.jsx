@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <div id="home_section">
     <section className="section" id={styles.home}>
+      <div className="container">
         <div className={cx(styles.container, styles.home)}>
           <div className={styles.homeTitle}>
             <h1 className="title">SOCIEDADE DE ADVOGADOS</h1>
@@ -26,9 +27,10 @@ export default function Home() {
               width={497}
               height={246}
               alt="Logo Inicial Almendra e Mota sociedade de advogados" 
-            />
+              />
           </div>
         </div>
+      </div>
     </section>
     </div>
   )

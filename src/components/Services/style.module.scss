@@ -1,45 +1,45 @@
-.container {
-  margin-left: 2.4rem;
-  margin-right: 2.4rem;
-}
-
 #services {
   min-height: auto;
   
-  background-image: url('../../../public/images/services.svg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: var(--black);
+  background-color: #101014;
 }
 
 .textContainerServices {
   display: flex;
-  justify-content: center;
+  p {
+    max-width: 450px;
+  }
 }
 
 .cardContainer {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 5rem;
 }
 
 .ico, .ico2 img{
   margin-bottom: 0.875rem;
+  border-radius: 4px;
+}
+
+.image {
+  color: #333;
 }
 
 .servicesCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: start;
+  text-align: left;
   
-  height: 52rem;
-  padding: 5rem 4rem;
+  height: 48rem;
+  width: 35rem;
   margin-top: 4.4rem;
-  border-radius: 2px;
+  border-radius: 4px;
   
-  background-color: var(--white);
+  background-color: transparent;
+  border: 1px solid #333;
   transition: ease 0.2s;
 
   &:first-child {
@@ -52,21 +52,31 @@
 }
 
 .servicesText {
+  padding-left: 2rem;
+  
   h3 {
-    color: var(--black);
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    color: var(--white);
   }
 
   p {
-    max-width: 44rem;
+    margin-right: 1rem;
     margin-top: 2rem;
-    line-height: 2.4rem;
-    font-size: 1.35rem;
-    text-align: justify;
-    color: var(--black-light);
+    line-height: 2.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--gray-light);
   }
 }
 
-@media (max-width: 1199.98px) {
+.more {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
   .cardContainer {
       flex-direction: column;
       margin: 0;
@@ -77,11 +87,36 @@
       align-items: center;
       justify-content: center;
   }
+
+  .textContainerServices {
+    justify-content: center;
+  }
+
+  .textTitles {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cardContainer {
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .servicesCard {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 575.98px){
   .servicesCard {
       height: auto;
+  }
+
+  .textContainerServices {
+    justify-content: center;
   }
 
   .servicesText p {

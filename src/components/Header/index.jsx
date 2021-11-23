@@ -1,18 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider,
   ChevronDownIcon
 } from "@chakra-ui/react"
 
@@ -23,25 +16,7 @@ import { NavLinks } from './NavLinks'
 export default function Header() {
   const cx = (...classNames) => classNames.join(' ');
   const [ open, setOpen ] = useState(false);
-  const [ button, setButton ] = useState(true);
   const [ navbar, setnavbar ] = useState(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 700) {
-      setButton(false)
-    } else {
-      setButton(true)
-    }
-  }
-
-  useEffect(() => {
-    showButton()
-  }, [])
-
-  if (typeof window !== "undefined") {
-    // Client-side-only code
-    window.addEventListener('resize', showButton)
-  }
 
   const changeBackground = () => {
     if(window.scrollY >= 80) {
@@ -52,7 +27,6 @@ export default function Header() {
   }
 
   if (typeof window !== "undefined") {
-    // Client-side-only code
     window.addEventListener('scroll', changeBackground)
   }
 
