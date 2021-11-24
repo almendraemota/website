@@ -1,37 +1,21 @@
 import Image from 'next/image'
 
-//imports-components-and-styles
+import { Container, HomeContainer } from './style'
 import styles from './style.module.scss'
 
 export default function Home() {
-  const cx = (...classNames) => classNames.join(' ');
-  
   return (
-    <div id="home_section">
-    <section className="section" id={styles.home}>
-      <div className="container">
-        <div className={cx(styles.container, styles.home)}>
-          <div className={styles.homeTitle}>
-            <h1 className="title">SOCIEDADE DE ADVOGADOS</h1>
-            <p className="text">
-              Com atuação nas áreas comercial, trabalhista, previdenciária e tributária.
-            </p>
-            <a href="#about_section">
-              <button className="button-white">Saiba mais</button>
-            </a>
-          </div>
-          <div className={styles.homeLogo}>
-            <Image
-              className={styles.logo} 
-              src={"/images/logo.svg"}
-              width={497}
-              height={246}
-              alt="Logo Inicial Almendra e Mota sociedade de advogados" 
-              />
-          </div>
-        </div>
+    <Container id="home_section">
+      <div className={styles.background}>
+        <HomeContainer className="margins">
+          <p>SOCIEDADE DE ADVOGADOS</p>
+          <h1>Lorem Ipsum</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s
+          </p>
+          <a href="#about_section"><button>Saiba mais</button></a>
+        </HomeContainer>
       </div>
-    </section>
-    </div>
+    </Container>
   )
 }

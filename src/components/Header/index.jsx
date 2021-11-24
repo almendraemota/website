@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 import {
   Menu,
@@ -60,8 +61,14 @@ export default function Header() {
   return (
     <header id={styles.nav} className={navbar ? "header active" : "header"}>
       <nav className={cx(styles.navBar, styles.container)}>
-        <div>
-          <h1>Logo</h1>
+        <div className={styles.logoImage}>
+          <Image 
+            src={"/images/logo-header.svg"}
+            alt="Logo Almendra e Mota"
+            width={52}
+            height={67}
+            
+          />
         </div>
 
         <div className={styles.menuMain}>
