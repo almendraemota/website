@@ -1,6 +1,9 @@
 {
   "name": "almendra-e-mota",
   "private": true,
+  "engines": {
+    "node": "16.15.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
