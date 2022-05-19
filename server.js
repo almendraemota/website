@@ -1,25 +1,36 @@
 const { createServer } = require("http");
+const { parse } = require("url");
 const next = require("next");
 
-const isDevMode = process.env.NODE_ENV !== "production";
-const port = process.env.PORT ? process.env.PORT : 3000;
+const dev = process.env.NODE_ENV !== "production";
+const hostname = "localhost";
+const port = 3000;
+// when using middleware `hostname` and `port` must be provided below
+const app = next({ dev, hostname, port });
+const handle = app.getRequestHandler();
 
-const nextjsApp = next({ dev: isDevMode });
-const nextjsRequestHandler = nextjsApp.getRequestHandler();
+app.prepare().then(() => {
+  createServer(async (req, res) => {
+    try {
+      // Be sure to pass `true` as the second argument to `url.parse`.
+      // This tells it to parse the query portion of the URL.
+      const parsedUrl = parse(req.url, true);
+      const { pathname, query } = parsedUrl;
 
-nextjsApp
-  .prepare()
-  .then(() => {
-    createServer((req, res) => {
-      // The request url likely will not include a protocol or host, therefore
-      // resolve the request url against a dummy base url.
-      const url = new URL(req.url, "http://w.w");
-      nextjsRequestHandler(req, res, url);
-    }).listen(port, (err) => {
-      if (err) throw err;
-    });
-  })
-  .catch((ex) => {
-    console.error(ex.stack);
-    process.exit(1);
+      if (pathname === "/a") {
+        await app.render(req, res, "/a", query);
+      } else if (pathname === "/b") {
+        await app.render(req, res, "/b", query);
+      } else {
+        await handle(req, res, parsedUrl);
+      }
+    } catch (err) {
+      console.error("Error occurred handling", req.url, err);
+      res.statusCode = 500;
+      res.end("internal server error");
+    }
+  }).listen(port, (err) => {
+    if (err) throw err;
+    console.log(`> Ready on http://${hostname}:${port}`);
   });
+});
